@@ -16,19 +16,22 @@
         </div>
         <!---->    
         <div class="task-screen">
-             <h1>Завдання на <br><span class="select-date"></span></h1>
+             <h1>Завдання на <br><span class="selected-date"></span></h1>
             <ul class="task-list"></ul>
-            <button class="add-task">Додати завданя</button>
+            <button class="add-task">Додати завдання</button>
             <button class="back-to-calendar">Назад</button>
         </div>
         <!---->
         <div class="add-task-screen">
-            <h1>Додати завдання на <br><span class="select-date"></span></h1>
-            <input type="text" class="tack-input" required placeholder="Введить нове завданя">
+            <h1>Додати завдання на <br><span class="task-date"></span></h1>
+            <form class="task-form">
+            <input type="text" class="task-input" required placeholder="Введіть нове завдання">
             <button type="submit" class="add">Додати</button>
             <button class="cancel-add-task">Відміна</button>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>
+    
 </body>
 </html>
