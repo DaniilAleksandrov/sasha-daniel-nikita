@@ -1,1 +1,115 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-image: linear-gradient(90deg, rgba(115, 31, 128,0.23) 0%, rgba(115, 31, 128,0.23) 14.286%,rgba(60, 22, 121,0.23) 14.286%, rgba(60, 22, 121,0.23) 28.572%,rgba(32, 17, 118,0.23) 28.572%, rgba(32, 17, 118,0.23) 42.858%,rgba(87, 26, 125,0.23) 42.858%, rgba(87, 26, 125,0.23) 57.144%,rgba(170, 40, 135,0.23) 57.144%, rgba(170, 40, 135,0.23) 71.43%,rgba(197, 45, 138,0.23) 71.43%, rgba(197, 45, 138,0.23) 85.716%,rgba(142, 36, 131,0.23) 85.716%, rgba(142, 36, 131,0.23) 100.002%),linear-gradient(135deg, rgba(115, 31, 128,0.23) 0%, rgba(115, 31, 128,0.23) 14.286%,rgba(60, 22, 121,0.23) 14.286%, rgba(60, 22, 121,0.23) 28.572%,rgba(32, 17, 118,0.23) 28.572%, rgba(32, 17, 118,0.23) 42.858%,rgba(87, 26, 125,0.23) 42.858%, rgba(87, 26, 125,0.23) 57.144%,rgba(170, 40, 135,0.23) 57.144%, rgba(170, 40, 135,0.23) 71.43%,rgba(197, 45, 138,0.23) 71.43%, rgba(197, 45, 138,0.23) 85.716%,rgba(142, 36, 131,0.23) 85.716%, rgba(142, 36, 131,0.23) 100.002%),linear-gradient(0deg, rgba(115, 31, 128,0.23) 0%, rgba(115, 31, 128,0.23) 14.286%,rgba(60, 22, 121,0.23) 14.286%, rgba(60, 22, 121,0.23) 28.572%,rgba(32, 17, 118,0.23) 28.572%, rgba(32, 17, 118,0.23) 42.858%,rgba(87, 26, 125,0.23) 42.858%, rgba(87, 26, 125,0.23) 57.144%,rgba(170, 40, 135,0.23) 57.144%, rgba(170, 40, 135,0.23) 71.43%,rgba(197, 45, 138,0.23) 71.43%, rgba(197, 45, 138,0.23) 85.716%,rgba(142, 36, 131,0.23) 85.716%, rgba(142, 36, 131,0.23) 100.002%),linear-gradient(90deg, rgb(128, 128, 128),rgb(23, 23, 23));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;  
+}
 
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(193, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+}
+
+button {
+    padding: 10px;
+    background: #27af47;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #23a03e;
+}
+
+.date-picker, .task-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.task-screen, .add-task-screen{
+    display: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+li .delete {
+    background: #db2e40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+li .delete:hover {
+    background: #9d1b28;
+}
+/* Адаптивність для портретної орієнтації та ширини до 450px */
+@media (orientation: portrait) and (max-width: 450px) {
+    .container {
+        width: 90%;
+        max-width: 300px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    button, .date-picker, .task-input {
+        width: 90%;
+        padding: 10px;
+    }
+
+
+    ul {
+        margin-top: 15px;
+    }
+
+
+    li {
+        padding: 10px;
+    }
+
+
+    li .delete {
+        width: 30%;
+    }
+}
