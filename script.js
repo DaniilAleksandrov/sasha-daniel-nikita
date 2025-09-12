@@ -40,7 +40,7 @@ cancelAddTaskButton.addEventListener('click', function() {
 
 
 function renderTasks(date) {
-    taskList.innerHTML - ''
+    taskList.innerHTML = ''
     if (tasks[date]) {
         tasks[date].forEach(function(task) {
             let li = document.createElement('li')
@@ -71,7 +71,7 @@ selectDateButton.addEventListener('click', function() {
 })
 
 
-taskForm.addEventListener('sumbit', function(e) {
+taskForm.addEventListener('submit', function(e) {
 
     e.preventDefault()
     let taskText = taskInput.value
@@ -81,6 +81,9 @@ taskForm.addEventListener('sumbit', function(e) {
         alert('Введіть завдання')
         return 
         
+    }
+      if (!tasks[selectedDate]) { 
+        tasks[selectedDate] = []
     }
    tasks[selectedDate].push(taskText)
    taskInput.value = ''
@@ -100,6 +103,9 @@ taskList.addEventListener('click', function (event){
         //.nodeValue  сам текст.
         //.trim() прибирає зайві пробіли на початку та в кінці.
         //Таким чином отримуємо рядок типу "Купити молоко".
+  if (!tasks[selectedDate]) { // Якщо для вибраної дати немає завдань, створити новий масив
+        tasks[selectedDate] = []
+    }
 
         // Видалити завдання з масиву завдань для вибраної дати
         for (let i = 0; i < tasks[selectedDate].length; i += 1) {
